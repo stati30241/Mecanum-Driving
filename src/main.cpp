@@ -20,6 +20,7 @@ int main() {
   vex::controller controller1;
   MecDrivetrain mecDrivetrain{ 0, 1, 2, 3, 319, 175, 260 };
 
+  // Main loop
   while (true) {
     // Gets the positions of the drive control axis (axis 3 and 4)
     int32_t x = -controller1.Axis4.position(vex::percentUnits::pct);

@@ -23,7 +23,7 @@ int main() {
   // Main loop
   while (true) {
     // Gets the positions of the drive control axis (axis 3 and 4)
-    int32_t x = -controller1.Axis4.position(vex::percentUnits::pct);
+    int32_t x = controller1.Axis4.position(vex::percentUnits::pct);
     int32_t y = controller1.Axis3.position(vex::percentUnits::pct);
 
     // Calculates the magnitude and angle from the x and y components

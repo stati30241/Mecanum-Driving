@@ -35,7 +35,8 @@ int main() {
 
     // Drives and rotates the robot based on the input
     if (rot) mecDrivetrain.rotate(rot, vex::velocityUnits::pct);
-    else mecDrivetrain.drive(mag, vex::velocityUnits::pct, theta);
+    else if (mag) mecDrivetrain.drive(mag, vex::velocityUnits::pct, theta);
+    else mecDrivetrain.stop(vex::brakeType::hold);
 
     // Prints the info on the controller screen
     controller1.Screen.clearScreen();
